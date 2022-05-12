@@ -1,0 +1,119 @@
+.contactWindow {
+    display: none;
+    padding: 5vh;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: rgba(30,31,35,255);
+    z-index: 999;
+    height: 100vh;
+    width: 60%;
+}
+
+.contactWindow__visible {
+    display: block;
+    transition: all 300ms ease-in-out;
+}
+
+.contactWindow__closeButton {
+    position: absolute;
+    top: 5vh;
+    right: 20vh;
+    font-size: 3em;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.contactWindow {
+    color: white;
+}
+
+.contactWindow__container {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    padding: 10vh 0 10vh 0;
+}
+
+.contactWindow__header {
+    text-align: center;
+    font-size: 3em;
+    padding-bottom: 10vh;
+}
+
+.contactWindow__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width:1100px) {
+    .contactWindow__content {
+        display: flex;
+    }
+
+    .contactWindow__companyData {
+        display: none;
+    }
+}
+
+@media (max-width:700px) {
+    .contactWindow__formItem {
+        width: 100%;
+    }
+}
+
+.contactWindow__companyData {
+    text-align: center;
+}
+
+.contactWindow__companyDataItem:first-child {
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.contactWindow__companyDataItem:nth-child(odd) {
+    padding-bottom: 5vh;
+}
+
+.contactWindow__form {
+    text-align: center;
+}
+
+.contactWindow__formItem {
+    min-width: 70%;
+    padding: 10px;
+    margin: 5px 0 5px 0;
+    background-color: inherit;
+    border: 2px solid whitesmoke;
+    color: whitesmoke;
+    font-size: 1em;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.contactWindow__formItem--submitButton {
+    cursor: pointer;
+    letter-spacing: 0.7px;
+    transition: all 300ms ease-in-out;
+}
+
+.contactWindow__formItem--submitButton:hover {
+    background-color: rgb(223, 100, 34);
+    border: 2px solid rgb(223, 100, 34);
+}
+
+.contactWindow__formHeader {
+    font-size: 1.5em;
+    margin-bottom: 3vh;
+}
+
+.contactWindow__formAnswer {
+    font-size: 1em;
+    margin-bottom: 3vh;
+}
+
+.contactWindow__formItem--textarea {
+    resize: vertical;
+}

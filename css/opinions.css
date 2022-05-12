@@ -1,0 +1,30 @@
+.opinions {
+    background-color: inherit;
+    width: 100%;
+    height: auto;
+    color: white;
+    padding: 10vh 0 10vh 0;
+}
+.options__header {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.opinions__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    width: 80%;
+    margin: 0 auto;
+    list-style: none;
+    gap: 30px;
+    padding-top: 10vh;
+}
+
+.opinions__item {
+    height: 50vh;
+    -webkit-box-shadow: 1px 1px 18px -11px rgba(255, 171, 80, 1);
+    -moz-box-shadow: 1px 1px 18px -11px rgba(255, 171, 80, 1);
+    box-shadow: 1px 1px 18px -11px rgba(255, 171, 80, 1);
+}

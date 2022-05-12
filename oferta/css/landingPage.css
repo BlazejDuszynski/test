@@ -1,0 +1,221 @@
+.landingPage__logo {
+    max-height: 10vh;
+    cursor: pointer;
+}
+
+.landingPage__header {
+    margin: 2vh auto;
+    width: 80%;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    color: rgb(226, 224, 219);
+    position: relative;
+}
+
+.landingPage__burgerMenu {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    width: 35px;
+    height: 30px;
+    right: 5%;
+    justify-content: space-between;
+}
+
+.landingPage__burgerMenuBar {
+    height: 3px;
+    width: 100%;
+    background-color: rgb(226, 224, 219);
+    border-radius: 10px;
+}
+
+@media (max-width: 950px) {
+    .landingPage__navList {
+        display: none;
+    }
+
+    .landingPage__burgerMenu {
+        display: flex;
+    }
+
+    .landingPage__containerItem--showMoreButton {
+        font-size: 2vw;
+    }
+
+    .landingPage__containerItem:not(:last-child) {
+        font-size: 5vw;
+    }
+}
+
+.landingPage__navList {
+    list-style: none;
+    color: rgb(226, 224, 219);
+}
+
+.landingPage__navItem {
+    display: inline-block;
+    padding: 10px 20px;
+    position: relative;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+
+.landingPage__navItem:hover {
+    color: rgb(223, 100, 34);
+}
+
+.landingPage__navItem:not(:last-child)::before {
+    content: '';
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    background: rgb(223, 100, 34);
+    width: 0%;
+    height: 2px;
+    transition: all 300ms ease-in-out;
+}
+
+.landingPage__navItem:not(:last-child):hover::before {
+    width: 100%;
+}
+
+.landingPage__navItem:last-child {
+    border: 2px solid rgb(226, 224, 219);
+    transition: all 300ms ease-in-out;
+    color: rgb(226, 224, 219);
+}
+
+.landingPage__navItem:last-child:hover {
+    background-color: rgb(223, 100, 34);
+    border: 2px solid rgb(223, 100, 34);
+}
+
+.landingPage__navLink {
+    text-decoration: none;
+    color: inherit;
+}
+
+.landingPage__content {
+    position: absolute;
+    display: flex;
+    padding: 0 20px;
+    justify-content: space-between;
+    color: rgb(226, 224, 219);
+    width: 80%;
+    margin: 10vh auto;
+    text-align: center;
+    top: 20%;
+    left: 10%;
+}
+
+.landingPage__containerItem {
+    padding: 15px 0;
+    width: 100%;
+    transition: all 300ms ease-in-out;
+    cursor: pointer;
+}
+
+.landingPage__containerItem--first {
+    transform: rotateY(90deg);  
+    animation: rotationLandingPage__containerItem--first .5s ease-in-out forwards;
+    animation-delay: .2s;
+}
+
+@keyframes rotationLandingPage__containerItem--first {
+    0% {
+        transform: rotateY(90deg);
+    }
+
+    100% {
+        transform: rotateY(0);
+    }
+}
+
+.landingPage__containerItem--second {
+    transform: rotateY(90deg);
+    animation: rotationLandingPage__containerItem--second .5s ease-in-out forwards;
+    animation-delay: .7s;
+}
+
+@keyframes rotationLandingPage__containerItem--second {
+    0% {
+        transform: rotateY(90deg);
+    }
+
+    100% {
+        transform: rotateY(0);
+    }
+}
+
+.landingPage__containerItem--third {
+    transform: rotateY(90deg);
+    animation: rotationLandingPage__containerItem--third .5s ease-in-out forwards;
+    animation-delay: 1.2s;
+}
+
+@keyframes rotationLandingPage__containerItem--third {
+    0% {
+        transform: rotateY(90deg);
+    }
+
+    100% {
+        transform: rotateY(0);
+    }
+}
+
+.landingPage__containerItem--fourth {
+    opacity: 0;
+    cursor: none;
+    animation: rotationLandingPage__containerItem--fourth .5s ease-in-out forwards;
+    animation-delay: 1.7s;
+}
+
+@keyframes rotationLandingPage__containerItem--fourth {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.landingPage__containerItem:not(:last-child):hover {
+    color: rgb(223, 100, 34);
+}
+
+.landingPage__containerItem:not(:last-child) {
+    text-align: left;
+    font-size: 3vw;
+    font-weight: 700;
+}
+
+.landingPage__containerItem--showMoreButton {
+    background: none;
+    border: 4px solid rgb(226, 224, 219);
+    padding: 20px 30px;
+    color: rgb(226, 224, 219);
+    font-family: 'Quicksand', sans-serif;
+    margin-top: 30px;
+    font-size: 1.5rem;
+    opacity: 0;
+    transition: all 300ms ease-in-out;
+    animation: appearLandingPage__containerItem--showMoreButton 1.5s 2s forwards ease-in-out;
+}
+
+@keyframes appearLandingPage__containerItem--showMoreButton {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.landingPage__containerItem--showMoreButton:hover {
+    background-color: rgb(223, 100, 34);
+    border: 4px solid rgb(223, 100, 34);
+}

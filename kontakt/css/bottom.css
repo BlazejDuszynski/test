@@ -1,0 +1,38 @@
+.bottom {
+    width: 100%;
+    height: auto;
+    background-color: rgba(30, 31, 35, 255);
+    color: rgb(211, 209, 209);
+}
+
+.bottom__container {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 5px;
+}
+
+.bottom__link {
+    text-decoration: none;
+    color: rgb(211, 209, 209);
+}
+
+@media (max-width: 950px) {
+    .bottom {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width:800px) {
+    .bottom {
+        font-size: 0.7em;
+    }
+}
+
+@media (max-width:600px) {
+    .bottom {
+        font-size: 0.6em;
+    }
+
+}
