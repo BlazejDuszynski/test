@@ -35,6 +35,12 @@
     margin: 0 auto;
 }
 
+@media (max-width:1200px) {
+    .whyUs__item {
+        font-size: 1em;
+    }
+}
+
 @media (max-width:950px) {
     .whyUs__question {
         font-size: 2.5em;
@@ -51,9 +57,9 @@
     }
 }
 
-@media (max-width:1200px) {
-    .whyUs__item {
-        font-size: 1em;
+@media (max-width:950px) {
+    .whyUs__question {
+        font-size: 2em;
     }
 }
 

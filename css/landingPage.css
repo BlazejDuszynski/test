@@ -1,11 +1,13 @@
-.landingPage__logo {
-    max-height: 10vh;
-    cursor: pointer;
-}
-
 .landingPage {
     height: 100vh;
     overflow: hidden;
+}
+
+/*header start*/
+
+.landingPage__logo {
+    max-height: 10vh;
+    cursor: pointer;
 }
 
 .landingPage__header {
@@ -32,28 +34,6 @@
     width: 100%;
     background-color: rgb(226, 224, 219);
     border-radius: 10px;
-}
-
-@media (max-width: 950px) {
-    .landingPage__navList {
-        display: none;
-    }
-
-    .landingPage__burgerMenu {
-        display: flex;
-    }
-
-    .landingPage__containerItem--showMoreButton {
-        font-size: 2vw;
-    }
-
-    .landingPage__containerItem:not(:last-child) {
-        font-size: 5vw;
-    }
-
-    .landingPage__containerItem:not(:last-child) {
-        
-    }
 }
 
 .landingPage__navList {
@@ -105,6 +85,10 @@
     color: inherit;
 }
 
+/*header end*/
+
+/* main start */
+
 .backgroundImage {
     height: 90vh;
     width: 100%;
@@ -119,9 +103,6 @@
     padding: 0 20px;
     justify-content: space-between;
     color: rgb(226, 224, 219);
-    width: 80%;
-    margin: 10vh auto;
-    text-align: center;
     top: 20%;
     left: 10%;
 }
@@ -130,7 +111,6 @@
     padding: 15px 0;
     width: 100%;
     transition: all 300ms ease-in-out;
-    cursor: pointer;
 }
 
 .landingPage__containerItem--first {
@@ -204,7 +184,7 @@
 
 .landingPage__containerItem:not(:last-child) {
     text-align: left;
-    font-size: 2.4em;
+    font-size: 7vh;
     font-weight: 700;
 }
 
@@ -215,8 +195,9 @@
     color: rgb(226, 224, 219);
     font-family: 'Quicksand', sans-serif;
     margin-top: 30px;
-    font-size: 1.5rem;
+    font-size: 5vh;
     opacity: 0;
+    cursor: pointer;
     transition: all 300ms ease-in-out;
     animation: appearLandingPage__containerItem--showMoreButton 1.5s 2.5s forwards ease-in-out;
 }
@@ -234,4 +215,50 @@
 .landingPage__containerItem--showMoreButton:hover {
     background-color: rgb(223, 100, 34);
     border: 4px solid rgb(223, 100, 34);
+}
+
+/* main end */
+
+
+/* media queries */
+
+@media (max-width: 1100px) {
+    .landingPage__containerItem:not(:last-child) {
+        font-size: 2em;
+    }
+
+    .landingPage__containerItem--showMoreButton {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 950px) {
+    .landingPage__navList {
+        display: none;
+    }
+
+    .landingPage__burgerMenu {
+        display: flex;
+    }
+
+}
+
+@media (max-width: 800px) {
+    .landingPage__content {
+        margin: 0 auto;
+    }
+
+    .landingPage__containerItem--showMoreButton {
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .landingPage__containerItem:not(:last-child) {
+        font-size: 1.5em;
+    }
+
+    .landingPage__containerItem--showMoreButton {
+        font-size: 1em;
+    }
 }
